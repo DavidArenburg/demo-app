@@ -8,22 +8,17 @@ pipeline {
     }
     stage('Install') {
       steps {
-        sh 'npm install'
+        sh 'echo npm install'
       }
     }
     stage('TEST') {
       steps {
-        sh 'npm test'
+        sh 'echo npm test'
       }
     }
     stage('BUILD') {
       steps {
-        sh 'npm run build'
-      }
-    }
-    stage('ARTIFACT') {
-      steps {
-        archiveArtifacts '*.zip'
+        sh 'echo npm run build'
       }
     }
   }
